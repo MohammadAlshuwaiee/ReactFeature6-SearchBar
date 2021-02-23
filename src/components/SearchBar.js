@@ -5,10 +5,9 @@ import { SearchBarStyled } from "../styles";
 const SearchBar = (props) => {
   return (
     <SearchBarStyled
-      onChange={(event) => console.log(event.target.value)}
       placeholder="Search for a cookie name"
+      onChange={(event) => props.setQuery(event.target.value)}
     />
   );
 };
-
 export default SearchBar;
